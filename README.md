@@ -1,3 +1,3 @@
-# I_learn_selenium
+# learn_selenium
 Here i learn selenium =)
 sssssqqqqq
