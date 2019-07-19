@@ -19,3 +19,7 @@ C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\csharp_example\csharp
 C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\csharp_example\csharp_example\obj\Debug\csharp_example.csproj.CopyComplete
 C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\csharp_example\csharp_example\obj\Debug\csharp_example.dll
 C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\csharp_example\csharp_example\obj\Debug\csharp_example.pdb
+C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\learn_selenium\csharp_example\csharp_example\obj\Debug\csharp_example.csprojAssemblyReference.cache
+C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\learn_selenium\csharp_example\csharp_example\obj\Debug\csharp_example.csproj.CoreCompileInputs.cache
+C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\learn_selenium\csharp_example\csharp_example\obj\Debug\csharp_example.dll
+C:\Users\ZimatskiiSN\Documents\Visual Studio 2017\Projects\learn_selenium\csharp_example\csharp_example\obj\Debug\csharp_example.pdb

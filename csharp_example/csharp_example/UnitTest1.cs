@@ -4,8 +4,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+using OpenQA.Selenium.Remote;
 
 namespace csharp_example
 {
@@ -18,25 +21,24 @@ namespace csharp_example
         [SetUp]
         public void start()
         {
-            driver = new ChromeDriver("C:/Tools/"); // объект драйвера, с которым взаимодействуем далее, вызывая driver
+            driver = new InternetExplorerDriver("C:/Tools/"); // объект драйвера, с которым взаимодействуем далее, вызывая driver
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
 
         [Test]
         public void CSS_test_with_mountains()
         {
-            driver.Url = "https://www.pexels.com/";
-            Actions actions = new Actions(driver);
-            IWebElement search = driver.FindElement(By.CssSelector("html body header section div form div input")); // поиск по абсолютному пути
-            search.SendKeys("mountains");
-            driver.FindElement(By.CssSelector("button#search-action.rd__button")).Click(); // поиск по классу
-            driver.FindElement(By.CssSelector("article[data-meta-title='Silhouette Of Mountains · Free Stock Photo']")).Click(); // поиск конкретного эл-та по уникальному атрибуту
-            IWebElement dropdown = driver.FindElement(By.CssSelector("div[class='rd__dropdown rd__dropdown--right']")); //задаём элемент drop
-            actions.MoveToElement(dropdown).Build().Perform(); //наведение на элемент dropdown
-            driver.FindElement(By.CssSelector("input[value='640x411']")).Click();
-            driver.FindElement(By.CssSelector("button[class='js-download-custom-size-submit rd__button rd__button--full-width']")).Click();
-            Thread.Sleep(10000);
-
+             driver.Url = "https://www.pexels.com/";
+             Actions actions = new Actions(driver);
+             IWebElement search = driver.FindElement(By.CssSelector("input[placeholder='Search for free photos and videos']")); // поиск по абсолютному пути
+             search.SendKeys("mountains");
+             driver.FindElement(By.CssSelector("button#search-action.rd__button")).Click(); // поиск по классу
+             driver.FindElement(By.CssSelector("article[data-meta-title='Silhouette Of Mountains · Free Stock Photo']")).Click(); // поиск конкретного эл-та по уникальному атрибуту
+             IWebElement dropdown = driver.FindElement(By.CssSelector("div[class='rd__dropdown rd__dropdown--right']")); //задаём элемент drop
+             actions.MoveToElement(dropdown).Build().Perform(); //наведение на элемент dropdown
+             driver.FindElement(By.CssSelector("input[value='640x411']")).Click();
+             driver.FindElement(By.CssSelector("button[class='js-download-custom-size-submit rd__button rd__button--full-width']")).Click();
+             Thread.Sleep(10000); 
         }
 
         [Test]
@@ -53,7 +55,7 @@ namespace csharp_example
             driver.FindElement(By.CssSelector("input[value='640x411']")).Click();
             driver.FindElement(By.CssSelector("button[class='js-download-custom-size-submit rd__button rd__button--full-width']")).Click();
             Thread.Sleep(10000);
-
+            
         }
 
         [TearDown]
