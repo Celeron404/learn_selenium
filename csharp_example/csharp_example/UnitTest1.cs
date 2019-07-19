@@ -1,4 +1,5 @@
 ﻿ using System;
+using System.Diagnostics;
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
@@ -22,9 +23,9 @@ namespace csharp_example
             driver = new ChromeDriver("C:/Tools/");
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
         }
-
+        
         [Test]
-        public void FirstTestTest ()
+        public void CSS_Selector_Mountains ()
         {
             driver.Url = "https://www.pexels.com/";
             Actions actions = new Actions(driver);
@@ -38,6 +39,16 @@ namespace csharp_example
             driver.FindElement(By.CssSelector("button[class='js-download-custom-size-submit rd__button rd__button--full-width']")).Click();
             Thread.Sleep(10000);
             
+        }
+
+        [Test]
+        public void GetChromeSettings()
+        {
+            ChromeOptions options = new ChromeOptions();
+            // Console.WriteLine(options.Arguments);
+            //Debug.WriteLine("...");
+            Thread.Sleep(10000);
+
         }
 
         [TearDown]
